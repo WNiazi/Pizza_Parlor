@@ -15,28 +15,58 @@
       <h1 class="header">Pizza Parlor</h1>
     </div>
   <form>
-    <h2>Size</h2>
-    <ul>
-      <li>small</li>
-      <li>medium</li>
-      <li>large</li>
-    </ul>
-    <h2>Toppings</h2>
-    <h3>Protein</h3>
-    <ul>
-      <li>pepperoni</li>
-      <li>anchovy</li>
-      <li>sausage</li>
-    </ul>
-    <h3>Veggies</h3>
-    <ul>
-      <li>artichoke</li>
-      <li>mushroom</li>
-      <li>red oinions</li>
-      <button>Made my Pizza</button>
-    <h3>Total</h3>  
-    <h4>summary</h4>
-  </form>
+    <form id="formOne">
+      <div>
+        <select class="form-select" id="size-select" aria-label="Default select example">
+          <option selected>Size</option>
+          <option value="5">Small</option>
+          <option value="10">Medium</option>
+          <option value="15">Large</option>
+        </select>
+      </div>
+      <h2>Toppings</h2>
+      <div>
+        <h3>Protein</h3>
+        <h4>Can pick up to two. (hold command and enter)</h4>
+        <select class="form-select" id="ProteinTopping-select" size="2" aria-label="size 2 select example">
+          <option value="1">Sausage</option>
+          <option value="2">Anchovy</option>
+          <option value="3">Pepperoni</option>
+          <option value ="4">Chicken</option>
+        </select>
+      </div>
+      <div>
+        <h3>Veggie</h3>
+        <h4>Can pick up to two. (hold command and enter)</h4>
+        <select class="form-select" id="VeggieToppings-select" size="2" aria-label="size 2 select example">
+          <option value="1">Mushroom</option>
+          <option value="2">Red Onion</option>
+          <option value="3">Cheese</option>
+          <option value ="4">Olives </option>
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Amount</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01">
+          <option selected>Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div> 
+      <div id="submit-button">
+        <button type="submit" class="btn btn-primary">Made my Pizza</button>
+      </div>
+    </form>
+    <div class="total">
+      <p>
+        Total Cost <span size, toppings, amount ></span>is: <span class=""></span>
+      </p>
+    </div>
   </div>
 </body>
 </html>
+
+

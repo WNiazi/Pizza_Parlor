@@ -4,26 +4,29 @@ function PizzaCost (size, toppings, amount) {
   this.size=size; 
   this.toppings=toppings; 
   this.amount =amount; 
-  this.totalcost ={}; //cost ? 
 }
+// PizzaCost.prototype.totaltoppings =function (){ 
+// this.toppings = //toppings + this.toppings; 
+// let toppings =0;
+}//
 
 PizzaCost.prototype.cost =function (){
-  let cost; 
-  cost = 0; 
+  let cost = 0 ; 
+ 
   if (this.size ===5) {
     cost +=5 ;
   } else if (this.size ===10 ){
     cost +=10; 
   }else (this.size ===15)
   cost +=15; 
-  if (this.toppings ===1) {
+  if (this.totalToppings < 3 ) {
     cost +=1 ; 
-  } else if (this.toppings ===2){
+  } else if (this.totalToppings < 6){
     cost +=2 ; 
-  }else  if (this.toppings ===3){
+  }else  if (this.totalToppings < 9){
     cost +=3 ;
-  }else if (this.toppings ===4){
-    cost +=4; 
+  }else if (this.totalTtoppings < 12){
+    cost +=8; 
   }
   if (this.amount ===1){ 
     let totalcost =cost ; 
@@ -46,8 +49,9 @@ $(document).ready(function(){
    $("select#size").val("")
    $("select#toppings").val("")
    $("select#amount").val("")
-   let PizzaCost =new PizzaCost ;
    var newPizzaCost = new PizzaCost (size, toppings, amount);
    newPizzaCost.totalcost();
  });
 });
+
+
