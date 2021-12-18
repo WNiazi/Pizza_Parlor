@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,60 +10,70 @@
   <title>Pizza Parlor</title>
 </head>
 <body>
-  <div class="container">
-    <div class="jumbotron">
-      <h1 class="header">Pizza Parlor</h1>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div id="wrapperHeader">
+        <div id="header">
+                 <img src="img/images.jpg" width="1000" height="200" alt="logo" />
+        </div> 
+      </div>
+      <h1 class="display-4">Pizza Parlor</h1>
+      <p class="lead">Create your own Pizza!</p>
     </div>
-  <form>
-    <form id="formOne">
+  </div>
+  <div class ="container"> 
+  <form id ="formOne">
       <div>
         <select class="form-select" id="size-select" aria-label="Default select example">
-          <option selected>Size</option>
-          <option value="5">Small</option>
-          <option value="10">Medium</option>
-          <option value="15">Large</option>
+          <option value= "small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
         </select>
       </div>
       <h2>Toppings</h2>
       <div>
         <h3>Protein</h3>
-        <h4>Can pick up to two. (hold command and enter)</h4>
-        <select class="form-select" id="ProteinTopping-select" size="2" aria-label="size 2 select example">
-          <option value="1">Sausage</option>
-          <option value="2">Anchovy</option>
-          <option value="3">Pepperoni</option>
-          <option value ="4">Chicken</option>
+        <h4>To pick hold command and enter</h4>
+        <select class="form-selectP" multiple="multiple" id="ProteinTopping-select" size="6" aria-label="size 6 select example">
+          <option value=" sausage">Sausage</option>
+          <option value=" anchovy">Anchovy</option>
+          <option value=" pepperoni">Pepperoni</option>
+          <option value =" chicken">Chicken</option>
+          <option value =" tofu">Tofu</option>
+          <option value =" ham">Ham</option>
         </select>
       </div>
       <div>
         <h3>Veggie</h3>
-        <h4>Can pick up to two. (hold command and enter)</h4>
-        <select class="form-select" id="VeggieToppings-select" size="2" aria-label="size 2 select example">
-          <option value="1">Mushroom</option>
-          <option value="2">Red Onion</option>
-          <option value="3">Cheese</option>
-          <option value ="4">Olives </option>
+        <h4>To pick hold command and enter </h4>
+        <select class="form-select" multiple="multiple" id="VeggieToppings-select" size="6" aria-label="size 6 select example">
+          <option value=" mushroom">Mushroom</option>
+          <option value=" red oinion">Red Onion</option>
+          <option value=" chesse" aria-checked="checked">Cheese</option>
+          <option value =" olives">Olives </option>
+          <option value =" green oinion">Green Onion </option>
+          <option value =" tomato">Tomato </option>
         </select>
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Amount</label>
+          <label class="input-group-text" for="inputGroupSelect01">Amount of Pizza</label>
         </div>
         <select class="custom-select" id="inputGroupSelect01">
-          <option selected>Choose...</option>
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
         </select>
       </div> 
-      <div id="submit-button">
-        <button type="submit" class="btn btn-primary">Made my Pizza</button>
+      <div id="btnsubmit">
+        <button type="submit" class="btn btn-primary">Make my Pizza</button>
       </div>
     </form>
-    <div class="total">
-      <p>
-        Total Cost <span size, toppings, amount ></span>is: <span class=""></span>
-      </p>
+    <div id="results">
+      <p>Total pizza <span id ="total-pizza"> </span></p>
+      <p>Size of Pizza <span id="size-of-pizza"></span></p>
+      <p>Total toppings: <span id="total-toppings"></span></p>
+      <p>Total Cost <span id ="total-cost"></span></p> 
     </div>
   </div>
 </body>
